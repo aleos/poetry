@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        if let apiKey = NSUserDefaults.standardUserDefaults().stringForKey("BloggerApiKey") {
+        if let apiKey = NSBundle.mainBundle().infoDictionary!["BloggerApiKey"] as? String {
             Blogger.sharedInstance.apiKey = apiKey
             Blogger.sharedInstance.key = apiKey
         }
