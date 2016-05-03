@@ -21,9 +21,10 @@ class PoemsModelController {
             if let error = error {
                 print("Error fetching posts\(error)")
             } else if let postList = postList {
-                for post in postList.items {
-                    print("\(post.title)\n\(post.content)\n")
-                }
+//                for post in postList.items {
+//                    print("\(post.title)\n\(post.content)\n")
+//                }
+                self.poems = postList.items
                 completion(poems: postList.items)
             } else {
                 fatalError()

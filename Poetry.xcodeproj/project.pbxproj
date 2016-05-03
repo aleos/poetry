@@ -16,6 +16,7 @@
 		57CCE1E81CD7EE7A00DD9FE2 /* AtomParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CCE1E71CD7EE7A00DD9FE2 /* AtomParser.swift */; };
 		57CCE1EA1CD8C70000DD9FE2 /* PoemsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CCE1E91CD8C70000DD9FE2 /* PoemsModelController.swift */; };
 		57CCE1EC1CD8C9EB00DD9FE2 /* PoemTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CCE1EB1CD8C9EB00DD9FE2 /* PoemTitleCell.swift */; };
+		57CCE1F01CD8CF5300DD9FE2 /* PoemsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CCE1EF1CD8CF5300DD9FE2 /* PoemsDataSource.swift */; };
 		FEF9E0211EA05B6F375644A4 /* Pods_Poetry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0219713D60302CF176696EE /* Pods_Poetry.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		57CCE1E71CD7EE7A00DD9FE2 /* AtomParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomParser.swift; sourceTree = "<group>"; };
 		57CCE1E91CD8C70000DD9FE2 /* PoemsModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemsModelController.swift; sourceTree = "<group>"; };
 		57CCE1EB1CD8C9EB00DD9FE2 /* PoemTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemTitleCell.swift; sourceTree = "<group>"; };
+		57CCE1EF1CD8CF5300DD9FE2 /* PoemsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemsDataSource.swift; sourceTree = "<group>"; };
 		6F68C3F31AD14DEC5D6B59CC /* Pods-Poetry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poetry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Poetry/Pods-Poetry.debug.xcconfig"; sourceTree = "<group>"; };
 		A9A4A1003562320E5F91AE73 /* Pods-Poetry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poetry.release.xcconfig"; path = "Pods/Target Support Files/Pods-Poetry/Pods-Poetry.release.xcconfig"; sourceTree = "<group>"; };
 		E0219713D60302CF176696EE /* Pods_Poetry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poetry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,9 +103,7 @@
 			children = (
 				57CCE1E61CD7EE4800DD9FE2 /* Model */,
 				57CCE1C61CD7E28700DD9FE2 /* AppDelegate.swift */,
-				57CCE1C81CD7E28700DD9FE2 /* ViewController.swift */,
-				57CCE1EB1CD8C9EB00DD9FE2 /* PoemTitleCell.swift */,
-				57CCE1E91CD8C70000DD9FE2 /* PoemsModelController.swift */,
+				57CCE1EE1CD8CEF600DD9FE2 /* PoemsList */,
 				57CCE1CA1CD7E28700DD9FE2 /* Main.storyboard */,
 				57CCE1CD1CD7E28700DD9FE2 /* Assets.xcassets */,
 				57CCE1CF1CD7E28700DD9FE2 /* LaunchScreen.storyboard */,
@@ -127,6 +127,17 @@
 				57CCE1E71CD7EE7A00DD9FE2 /* AtomParser.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		57CCE1EE1CD8CEF600DD9FE2 /* PoemsList */ = {
+			isa = PBXGroup;
+			children = (
+				57CCE1C81CD7E28700DD9FE2 /* ViewController.swift */,
+				57CCE1EB1CD8C9EB00DD9FE2 /* PoemTitleCell.swift */,
+				57CCE1E91CD8C70000DD9FE2 /* PoemsModelController.swift */,
+				57CCE1EF1CD8CF5300DD9FE2 /* PoemsDataSource.swift */,
+			);
+			path = PoemsList;
 			sourceTree = "<group>";
 		};
 		7D5161A81F98F610A8899AB9 /* Frameworks */ = {
@@ -290,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57CCE1C91CD7E28700DD9FE2 /* ViewController.swift in Sources */,
+				57CCE1F01CD8CF5300DD9FE2 /* PoemsDataSource.swift in Sources */,
 				57CCE1C71CD7E28700DD9FE2 /* AppDelegate.swift in Sources */,
 				57CCE1EA1CD8C70000DD9FE2 /* PoemsModelController.swift in Sources */,
 				57CCE1EC1CD8C9EB00DD9FE2 /* PoemTitleCell.swift in Sources */,
