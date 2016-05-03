@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (3.3.1)
+  - GoogleAPISwiftClient (0.4.1):
+    - Alamofire (~> 3.3.0)
+    - GoogleAPISwiftClient/Common (= 0.4.1)
+    - ObjectMapper (~> 1.2.0)
+  - GoogleAPISwiftClient/Common (0.4.1):
+    - Alamofire (~> 3.3.0)
+    - ObjectMapper (~> 1.2.0)
+  - ObjectMapper (1.2.0)
+
+DEPENDENCIES:
+  - GoogleAPISwiftClient
+
+SPEC CHECKSUMS:
+  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
+  GoogleAPISwiftClient: 0d08fb9e876b5e02f9b3609570526e954c71257c
+  ObjectMapper: b1e9c7c8a9f6400b72690c80072c131504caa66f
+
+COCOAPODS: 0.39.0
