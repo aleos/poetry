@@ -1,8 +1,8 @@
 PODS:
   - Alamofire (3.3.1)
-  - GoogleAPISwiftClient (0.4.1):
+  - GoogleAPISwiftClient/Blogger (0.4.1):
     - Alamofire (~> 3.3.0)
-    - GoogleAPISwiftClient/Common (= 0.4.1)
+    - GoogleAPISwiftClient/Common
     - ObjectMapper (~> 1.2.0)
   - GoogleAPISwiftClient/Common (0.4.1):
     - Alamofire (~> 3.3.0)
@@ -10,7 +10,7 @@ PODS:
   - ObjectMapper (1.2.0)
 
 DEPENDENCIES:
-  - GoogleAPISwiftClient
+  - GoogleAPISwiftClient/Blogger
 
 SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
