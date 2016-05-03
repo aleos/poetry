@@ -13,6 +13,7 @@
 		57CCE1CE1CD7E28700DD9FE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57CCE1CD1CD7E28700DD9FE2 /* Assets.xcassets */; };
 		57CCE1D11CD7E28700DD9FE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57CCE1CF1CD7E28700DD9FE2 /* LaunchScreen.storyboard */; };
 		57CCE1DC1CD7E28700DD9FE2 /* PoetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CCE1DB1CD7E28700DD9FE2 /* PoetryTests.swift */; };
+		57CCE1E81CD7EE7A00DD9FE2 /* AtomParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CCE1E71CD7EE7A00DD9FE2 /* AtomParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		57CCE1D71CD7E28700DD9FE2 /* PoetryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoetryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57CCE1DB1CD7E28700DD9FE2 /* PoetryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetryTests.swift; sourceTree = "<group>"; };
 		57CCE1DD1CD7E28700DD9FE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57CCE1E71CD7EE7A00DD9FE2 /* AtomParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		57CCE1C51CD7E28700DD9FE2 /* Poetry */ = {
 			isa = PBXGroup;
 			children = (
+				57CCE1E61CD7EE4800DD9FE2 /* Model */,
 				57CCE1C61CD7E28700DD9FE2 /* AppDelegate.swift */,
 				57CCE1C81CD7E28700DD9FE2 /* ViewController.swift */,
 				57CCE1CA1CD7E28700DD9FE2 /* Main.storyboard */,
@@ -94,6 +97,14 @@
 				57CCE1DD1CD7E28700DD9FE2 /* Info.plist */,
 			);
 			path = PoetryTests;
+			sourceTree = "<group>";
+		};
+		57CCE1E61CD7EE4800DD9FE2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				57CCE1E71CD7EE7A00DD9FE2 /* AtomParser.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 			files = (
 				57CCE1C91CD7E28700DD9FE2 /* ViewController.swift in Sources */,
 				57CCE1C71CD7E28700DD9FE2 /* AppDelegate.swift in Sources */,
+				57CCE1E81CD7EE7A00DD9FE2 /* AtomParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +400,7 @@
 				57CCE1E21CD7E28700DD9FE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57CCE1E31CD7E28700DD9FE2 /* Build configuration list for PBXNativeTarget "PoetryTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +409,7 @@
 				57CCE1E51CD7E28700DD9FE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
