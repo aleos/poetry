@@ -78,7 +78,7 @@ extension AtomParser: NSXMLParserDelegate {
                 if let published = currentDataDictionary[.Published],
                     title = currentDataDictionary[.Title]?.stringByReplacingOccurrencesOfString("<[^>]+>", withString: "", options: .RegularExpressionSearch, range: nil),
                     content = currentDataDictionary[.Content] {
-                    let entry = Entry(published: published, updated: currentDataDictionary[.Updated], category: currentDataDictionary[.Category], title: title, content: content, link: currentDataDictionary[.Link])
+                    _ = Entry(published: published, updated: currentDataDictionary[.Updated], category: currentDataDictionary[.Category], title: title, content: content, link: currentDataDictionary[.Link])
                     
                     print(currentDataDictionary)
                 }
