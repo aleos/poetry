@@ -17,13 +17,10 @@ class PoemsModelController {
     }
     
     func fetchPoems(completion: (poems: [BloggerPost]) -> ()) {
-        Blogger.sharedInstance.listPosts(blogId: "7661037823808726647") { (postList, error) in
+        Blogger.sharedInstance.listPosts(blogId: NSBundle.mainBundle().infoDictionary!["BlogId"] as! String) { (postList, error) in
             if let error = error {
                 print("Error fetching posts\(error)")
             } else if let postList = postList {
-//                for post in postList.items {
-//                    print("\(post.title)\n\(post.content)\n")
-//                }
                 self.poems = postList.items
                 completion(poems: postList.items)
             } else {

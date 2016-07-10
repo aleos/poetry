@@ -17,7 +17,8 @@
 		57CCE1EA1CD8C70000DD9FE2 /* PoemsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CCE1E91CD8C70000DD9FE2 /* PoemsModelController.swift */; };
 		57CCE1EC1CD8C9EB00DD9FE2 /* PoemTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CCE1EB1CD8C9EB00DD9FE2 /* PoemTitleCell.swift */; };
 		57CCE1F01CD8CF5300DD9FE2 /* PoemsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CCE1EF1CD8CF5300DD9FE2 /* PoemsDataSource.swift */; };
-		FEF9E0211EA05B6F375644A4 /* Pods_Poetry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0219713D60302CF176696EE /* Pods_Poetry.framework */; };
+		A44A3391CCE5F3133F0F0278 /* Pods_PoetryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54FA5CC522220DE7F961969 /* Pods_PoetryTests.framework */; };
+		A73E6C8CA5155712C0DD4226 /* Pods_Poetry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8094E98486457767EF1328 /* Pods_Poetry.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		412B944BBD42B8FFC196B69D /* Pods-PoetryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoetryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoetryTests/Pods-PoetryTests.release.xcconfig"; sourceTree = "<group>"; };
 		57CCE1C31CD7E28700DD9FE2 /* Poetry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poetry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57CCE1C61CD7E28700DD9FE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57CCE1C81CD7E28700DD9FE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,9 +47,11 @@
 		57CCE1E91CD8C70000DD9FE2 /* PoemsModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemsModelController.swift; sourceTree = "<group>"; };
 		57CCE1EB1CD8C9EB00DD9FE2 /* PoemTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemTitleCell.swift; sourceTree = "<group>"; };
 		57CCE1EF1CD8CF5300DD9FE2 /* PoemsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemsDataSource.swift; sourceTree = "<group>"; };
-		6F68C3F31AD14DEC5D6B59CC /* Pods-Poetry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poetry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Poetry/Pods-Poetry.debug.xcconfig"; sourceTree = "<group>"; };
-		A9A4A1003562320E5F91AE73 /* Pods-Poetry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poetry.release.xcconfig"; path = "Pods/Target Support Files/Pods-Poetry/Pods-Poetry.release.xcconfig"; sourceTree = "<group>"; };
-		E0219713D60302CF176696EE /* Pods_Poetry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poetry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C8094E98486457767EF1328 /* Pods_Poetry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poetry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB661C386DF2448F812B5900 /* Pods-Poetry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poetry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Poetry/Pods-Poetry.debug.xcconfig"; sourceTree = "<group>"; };
+		E54FA5CC522220DE7F961969 /* Pods_PoetryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoetryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6224251480D5252465F5315 /* Pods-Poetry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poetry.release.xcconfig"; path = "Pods/Target Support Files/Pods-Poetry/Pods-Poetry.release.xcconfig"; sourceTree = "<group>"; };
+		EA364F20ECEE9D5C4CE8A650 /* Pods-PoetryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoetryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoetryTests/Pods-PoetryTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEF9E0211EA05B6F375644A4 /* Pods_Poetry.framework in Frameworks */,
+				A73E6C8CA5155712C0DD4226 /* Pods_Poetry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,29 +67,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A44A3391CCE5F3133F0F0278 /* Pods_PoetryTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		569F209E2795BF02CBDA8665 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6F68C3F31AD14DEC5D6B59CC /* Pods-Poetry.debug.xcconfig */,
-				A9A4A1003562320E5F91AE73 /* Pods-Poetry.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		57CCE1BA1CD7E28700DD9FE2 = {
 			isa = PBXGroup;
 			children = (
 				57CCE1C51CD7E28700DD9FE2 /* Poetry */,
 				57CCE1DA1CD7E28700DD9FE2 /* PoetryTests */,
 				57CCE1C41CD7E28700DD9FE2 /* Products */,
-				569F209E2795BF02CBDA8665 /* Pods */,
-				7D5161A81F98F610A8899AB9 /* Frameworks */,
+				74F6144A706AF9DD2B566B91 /* Pods */,
+				A936AC13B50B5EDEF3C86DFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,10 +136,22 @@
 			path = PoemsList;
 			sourceTree = "<group>";
 		};
-		7D5161A81F98F610A8899AB9 /* Frameworks */ = {
+		74F6144A706AF9DD2B566B91 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E0219713D60302CF176696EE /* Pods_Poetry.framework */,
+				AB661C386DF2448F812B5900 /* Pods-Poetry.debug.xcconfig */,
+				E6224251480D5252465F5315 /* Pods-Poetry.release.xcconfig */,
+				EA364F20ECEE9D5C4CE8A650 /* Pods-PoetryTests.debug.xcconfig */,
+				412B944BBD42B8FFC196B69D /* Pods-PoetryTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A936AC13B50B5EDEF3C86DFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C8094E98486457767EF1328 /* Pods_Poetry.framework */,
+				E54FA5CC522220DE7F961969 /* Pods_PoetryTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,12 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57CCE1E01CD7E28700DD9FE2 /* Build configuration list for PBXNativeTarget "Poetry" */;
 			buildPhases = (
-				A2CAFBA10DAD9978C469CB39 /* Check Pods Manifest.lock */,
+				227D23DBAD5523B039AD1EB4 /* [CP] Check Pods Manifest.lock */,
 				57CCE1BF1CD7E28700DD9FE2 /* Sources */,
 				57CCE1C01CD7E28700DD9FE2 /* Frameworks */,
 				57CCE1C11CD7E28700DD9FE2 /* Resources */,
-				6CBC0434BE53DEC95EAE7D24 /* Embed Pods Frameworks */,
-				AAC57BA8599DB7D46A371314 /* Copy Pods Resources */,
+				3DD9ACE377FB8A01CBA969A2 /* [CP] Embed Pods Frameworks */,
+				9F2152B149E33CC89989627B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -175,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57CCE1E31CD7E28700DD9FE2 /* Build configuration list for PBXNativeTarget "PoetryTests" */;
 			buildPhases = (
+				178FB6D2AE4FC0E44D6197C2 /* [CP] Check Pods Manifest.lock */,
 				57CCE1D31CD7E28700DD9FE2 /* Sources */,
 				57CCE1D41CD7E28700DD9FE2 /* Frameworks */,
 				57CCE1D51CD7E28700DD9FE2 /* Resources */,
+				AD2E70D0C24C7AA8F4609974 /* [CP] Embed Pods Frameworks */,
+				AFCB96970A6FEEF6930F56BB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,29 +259,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6CBC0434BE53DEC95EAE7D24 /* Embed Pods Frameworks */ = {
+		178FB6D2AE4FC0E44D6197C2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Poetry/Pods-Poetry-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A2CAFBA10DAD9978C469CB39 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,19 +274,79 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		AAC57BA8599DB7D46A371314 /* Copy Pods Resources */ = {
+		227D23DBAD5523B039AD1EB4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3DD9ACE377FB8A01CBA969A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Poetry/Pods-Poetry-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F2152B149E33CC89989627B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Poetry/Pods-Poetry-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD2E70D0C24C7AA8F4609974 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoetryTests/Pods-PoetryTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFCB96970A6FEEF6930F56BB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoetryTests/Pods-PoetryTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -432,7 +488,7 @@
 		};
 		57CCE1E11CD7E28700DD9FE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F68C3F31AD14DEC5D6B59CC /* Pods-Poetry.debug.xcconfig */;
+			baseConfigurationReference = AB661C386DF2448F812B5900 /* Pods-Poetry.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Poetry/Info.plist;
@@ -444,7 +500,7 @@
 		};
 		57CCE1E21CD7E28700DD9FE2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9A4A1003562320E5F91AE73 /* Pods-Poetry.release.xcconfig */;
+			baseConfigurationReference = E6224251480D5252465F5315 /* Pods-Poetry.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Poetry/Info.plist;
@@ -456,6 +512,7 @@
 		};
 		57CCE1E41CD7E28700DD9FE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA364F20ECEE9D5C4CE8A650 /* Pods-PoetryTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PoetryTests/Info.plist;
@@ -468,6 +525,7 @@
 		};
 		57CCE1E51CD7E28700DD9FE2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 412B944BBD42B8FFC196B69D /* Pods-PoetryTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PoetryTests/Info.plist;
