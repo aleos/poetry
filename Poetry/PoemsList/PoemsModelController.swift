@@ -10,14 +10,14 @@ import Foundation
 import GoogleAPIs
 
 class PoemsModelController {
-    private(set) var poems = [BloggerPost]()
+    fileprivate(set) var poems = [BloggerPost]()
     
-    private func configureBlogger() {
+    fileprivate func configureBlogger() {
         Blogger.sharedInstance.fetchBodies = false
     }
     
-    func fetchPoems(completion: (poems: [BloggerPost]) -> ()) {
-        Blogger.sharedInstance.listPosts(blogId: NSBundle.mainBundle().infoDictionary!["BlogId"] as! String) { (postList, error) in
+    func fetchPoems(_ completion: (_ poems: [BloggerPost]) -> ()) {
+        Blogger.sharedInstance.listPosts(blogId: Bundle.mainBundle().infoDictionary!["BlogId"] as! String) { (postList, error) in
             if let error = error {
                 print("Error fetching posts\(error)")
             } else if let postList = postList {

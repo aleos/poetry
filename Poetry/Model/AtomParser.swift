@@ -9,7 +9,7 @@
 import Foundation
 
 protocol AtomParserDelegate: class {
-    func parserDelegateParsingDidFinish(parser: AtomParser)
+    func parserDelegateParsingDidFinish(_ parser: AtomParser)
 }
 
 struct Entry {
@@ -30,7 +30,7 @@ struct Entry {
 ///         parser.startParsingWithContentsOfURL(url)
 ///     }
 class AtomParser: NSObject {
-    private enum EntryKey: String {
+    fileprivate enum EntryKey: String {
         case Published = "published"
         case Updated = "updated"
         case Category = "category"
@@ -42,32 +42,32 @@ class AtomParser: NSObject {
     
     weak var delegate: AtomParserDelegate?
     
-    private var arrParsedData = [[EntryKey: String]]()
-    private var currentDataDictionary = [EntryKey: String]()
+    fileprivate var arrParsedData = [[EntryKey: String]]()
+    fileprivate var currentDataDictionary = [EntryKey: String]()
     
-    private var currentElement: EntryKey?
-    private var foundCharacters = ""
+    fileprivate var currentElement: EntryKey?
+    fileprivate var foundCharacters = ""
     
-    func startParsingWithContentsOfURL(rssURL: NSURL) {
-        if let parser = NSXMLParser(contentsOfURL: rssURL) {
+    func startParsingWithContentsOfURL(_ rssURL: URL) {
+        if let parser = XMLParser(contentsOf: rssURL) {
             parser.delegate = self
             parser.parse()
         }
     }
 }
 
-extension AtomParser: NSXMLParserDelegate {
-    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+extension AtomParser: XMLParserDelegate {
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         currentElement = EntryKey(rawValue: elementName)
     }
     
-    func parser(parser: NSXMLParser, foundCharacters string: String) {
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
         if let _ = currentElement {
             foundCharacters += string
         }
     }
     
-    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if let currentElement = currentElement {
             currentDataDictionary[currentElement] = foundCharacters
             
@@ -76,8 +76,8 @@ extension AtomParser: NSXMLParserDelegate {
             if case EntryKey.Content = currentElement {
                 arrParsedData.append(currentDataDictionary)
                 if let published = currentDataDictionary[.Published],
-                    title = currentDataDictionary[.Title]?.stringByReplacingOccurrencesOfString("<[^>]+>", withString: "", options: .RegularExpressionSearch, range: nil),
-                    content = currentDataDictionary[.Content] {
+                    let title = currentDataDictionary[.Title]?.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil),
+                    let content = currentDataDictionary[.Content] {
                     _ = Entry(published: published, updated: currentDataDictionary[.Updated], category: currentDataDictionary[.Category], title: title, content: content, link: currentDataDictionary[.Link])
                     
                     print(currentDataDictionary)
@@ -86,7 +86,7 @@ extension AtomParser: NSXMLParserDelegate {
         }
     }
     
-    func parserDidEndDocument(parser: NSXMLParser) {
+    func parserDidEndDocument(_ parser: XMLParser) {
         delegate?.parserDelegateParsingDidFinish(self)
     }
 }

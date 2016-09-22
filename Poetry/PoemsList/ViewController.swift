@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    private var dataSource: PoemsDataSource!
+    fileprivate var dataSource: PoemsDataSource!
     
     @IBOutlet weak var tableView: UITableView!
     

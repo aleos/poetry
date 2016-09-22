@@ -1,22 +1,33 @@
 PODS:
-  - Alamofire (3.3.1)
-  - GoogleAPISwiftClient/Blogger (0.4.1):
-    - Alamofire (~> 3.3.0)
+  - Alamofire (4.0.0)
+  - GoogleAPISwiftClient/Blogger (0.5.0):
+    - Alamofire
     - GoogleAPISwiftClient/Common
-    - ObjectMapper (~> 1.2.0)
-  - GoogleAPISwiftClient/Common (0.4.1):
-    - Alamofire (~> 3.3.0)
-    - ObjectMapper (~> 1.2.0)
-  - ObjectMapper (1.2.0)
+    - ObjectMapper
+  - GoogleAPISwiftClient/Common (0.5.0):
+    - Alamofire
+    - ObjectMapper
+  - ObjectMapper (2.0.0)
 
 DEPENDENCIES:
-  - GoogleAPISwiftClient/Blogger
+  - Alamofire (~> 4.0.0)
+  - GoogleAPISwiftClient/Blogger (from `https://github.com/mattwyskiel/GoogleAPISwiftClient.git`, branch `swift-3.0`)
+
+EXTERNAL SOURCES:
+  GoogleAPISwiftClient:
+    :branch: swift-3.0
+    :git: https://github.com/mattwyskiel/GoogleAPISwiftClient.git
+
+CHECKOUT OPTIONS:
+  GoogleAPISwiftClient:
+    :commit: 966228df1887c595e84cf4b84565868d0f7d7491
+    :git: https://github.com/mattwyskiel/GoogleAPISwiftClient.git
 
 SPEC CHECKSUMS:
-  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
-  GoogleAPISwiftClient: 0d08fb9e876b5e02f9b3609570526e954c71257c
-  ObjectMapper: b1e9c7c8a9f6400b72690c80072c131504caa66f
+  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
+  GoogleAPISwiftClient: e0ee2e3541ae1cbb42b5d4dd03b4e6cd298a07ec
+  ObjectMapper: aed2570edabbd3c9b26c939e1cabdb6558f933e0
 
-PODFILE CHECKSUM: 68d4bef88d2dc8d4ca5f084336b83570ac7c0376
+PODFILE CHECKSUM: f2c90cee44c6f33fbe562495099aa68aa32fe575
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.0.rc.2
