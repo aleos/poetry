@@ -5,7 +5,7 @@ target 'Poetry' do
   pod 'GoogleAPISwiftClient/Blogger',
     :git => 'https://github.com/mattwyskiel/GoogleAPISwiftClient.git',
     :branch => 'swift-3.0'
-  pod 'Alamofire', '~> 4.0.0'
+  pod 'Alamofire', '~> 4.0'
 end
 
 target 'PoetryTests' do
