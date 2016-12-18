@@ -8,8 +8,6 @@
 
 import UIKit
 
-import GoogleAPIs
-
 class PoemsDataSource: NSObject, UITableViewDataSource {
     weak var tableView: UITableView? {
         didSet {
@@ -34,7 +32,7 @@ class PoemsDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let poemTitleCell = tableView.dequeueReusableCell(withIdentifier: String(describing: PoemTitleCell), for: indexPath) as! PoemTitleCell
+        let poemTitleCell = tableView.dequeueReusableCell(withIdentifier: String(describing: PoemTitleCell.self), for: indexPath) as! PoemTitleCell
         if indexPath.row < poemsController.poems.count {
             poemTitleCell.textLabel?.text = poemsController.poems[indexPath.row].title
         }

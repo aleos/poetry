@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57957E571E06B38B009F8C21 /* Blogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57957E561E06B38B009F8C21 /* Blogger.swift */; };
 		57CCE1C71CD7E28700DD9FE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CCE1C61CD7E28700DD9FE2 /* AppDelegate.swift */; };
 		57CCE1C91CD7E28700DD9FE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CCE1C81CD7E28700DD9FE2 /* ViewController.swift */; };
 		57CCE1CC1CD7E28700DD9FE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57CCE1CA1CD7E28700DD9FE2 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		412B944BBD42B8FFC196B69D /* Pods-PoetryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoetryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoetryTests/Pods-PoetryTests.release.xcconfig"; sourceTree = "<group>"; };
+		57957E561E06B38B009F8C21 /* Blogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blogger.swift; sourceTree = "<group>"; };
 		57CCE1C31CD7E28700DD9FE2 /* Poetry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poetry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57CCE1C61CD7E28700DD9FE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57CCE1C81CD7E28700DD9FE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				57CCE1E71CD7EE7A00DD9FE2 /* AtomParser.swift */,
+				57957E561E06B38B009F8C21 /* Blogger.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 			files = (
 				57CCE1C91CD7E28700DD9FE2 /* ViewController.swift in Sources */,
 				57CCE1F01CD8CF5300DD9FE2 /* PoemsDataSource.swift in Sources */,
+				57957E571E06B38B009F8C21 /* Blogger.swift in Sources */,
 				57CCE1C71CD7E28700DD9FE2 /* AppDelegate.swift in Sources */,
 				57CCE1EA1CD8C70000DD9FE2 /* PoemsModelController.swift in Sources */,
 				57CCE1EC1CD8C9EB00DD9FE2 /* PoemTitleCell.swift in Sources */,

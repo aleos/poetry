@@ -7,24 +7,18 @@
 //
 
 import Foundation
-import GoogleAPIs
+import GoogleAPIClientForREST
 
 class PoemsModelController {
-    fileprivate(set) var poems = [BloggerPost]()
+    fileprivate(set) var poems = [GTLRBlogger_Post]()
     
-    fileprivate func configureBlogger() {
-        Blogger.sharedInstance.fetchBodies = false
-    }
-    
-    func fetchPoems(_ completion: (_ poems: [BloggerPost]) -> ()) {
-        Blogger.sharedInstance.listPosts(blogId: Bundle.mainBundle().infoDictionary!["BlogId"] as! String) { (postList, error) in
+    func fetchPoems(_ completion: @escaping (_ poems: [GTLRBlogger_Post]) -> ()) {
+        Blogger.shared.posts { [weak self] (posts, error) in
             if let error = error {
                 print("Error fetching posts\(error)")
-            } else if let postList = postList {
-                self.poems = postList.items
-                completion(poems: postList.items)
             } else {
-                fatalError()
+                self?.poems = posts
+                completion(posts)
             }
         }
     }

@@ -8,8 +8,6 @@
 
 import UIKit
 
-import GoogleAPIs
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,12 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        if let apiKey = Bundle.main.infoDictionary!["BloggerApiKey"] as? String {
-            Blogger.sharedInstance.apiKey = apiKey
-            Blogger.sharedInstance.key = apiKey
-        }
-        
+                
         return true
     }
 
