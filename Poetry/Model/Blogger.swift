@@ -8,7 +8,7 @@
 
 import Foundation
 
-import GoogleAPIClientForREST
+import GoogleAPIClientForREST_Blogger
 
 class Blogger {
     static let shared = Blogger()
@@ -17,6 +17,7 @@ class Blogger {
     
     let bloggerService: GTLRBloggerService = {
         let service = GTLRBloggerService()
+//        service.shouldFetchNextPages = true
         if let apiKey = Bundle.main.infoDictionary?["BloggerApiKey"] as? String {
             service.apiKey = apiKey
         }

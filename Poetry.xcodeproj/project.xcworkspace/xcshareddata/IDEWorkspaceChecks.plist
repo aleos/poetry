@@ -2,9 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>BlogId</key>
-	<string>7661037823808726647</string>
-	<key>BloggerApiKey</key>
-	<string>AIzaSyAwYZLp5vrAq8xsVgeegjIALZpV6SWBu6M</string>
+	<key>IDEDidComputeMac32BitWarning</key>
+	<true/>
 </dict>
 </plist>

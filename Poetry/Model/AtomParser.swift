@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AtomParserDelegate: class {
+protocol AtomParserDelegate: AnyObject {
     func parserDelegateParsingDidFinish(_ parser: AtomParser)
 }
 

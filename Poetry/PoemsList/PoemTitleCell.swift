@@ -7,18 +7,23 @@
 //
 
 import UIKit
+import SwiftUI
 
-class PoemTitleCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+struct PoemTitleCell: View {
+    var text: String
+    
+    var body: some View {
+        Text(text)
+            .font(.custom("SavoyeLetPlain", size: 26))
+            .foregroundColor(Color("text"))
     }
+}
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+struct PoemTitleCell_Previews: PreviewProvider {
+    static var previews: some View {
+        PoemTitleCell(text: "Я здесь")
+            .padding()
+            .preferredColorScheme(.dark)
     }
-
 }
