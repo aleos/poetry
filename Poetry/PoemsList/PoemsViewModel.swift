@@ -33,6 +33,22 @@ class PoemsViewModel: ObservableObject {
             }
         }
     }
+    
+    private func savePostsInDocuments(posts: [GTLRBlogger_Post]) {
+        let postsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("Posts-\(Date.now.formatted(.iso8601))")
+        print("Posts dir URL is \(postsURL)")
+        do {
+            try FileManager.default.createDirectory(at: postsURL, withIntermediateDirectories: true)
+            for post in posts {
+                let publishedDate = ISO8601DateFormatter().date(from: post.published!)!
+                let dateFormatted = publishedDate.formatted(.iso8601.year().month().day())
+                let postURL = postsURL.appendingPathComponent("\(dateFormatted)-\(post.title!).md")
+                try post.content?.attributedHtmlString?.string.write(to: postURL, atomically: true, encoding: .utf8)
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 }
 
 extension String {
