@@ -27,7 +27,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var vm: PoemsViewModel = {
         var vm = PoemsViewModel()
-        vm.poems = [Poem](repeating: Poem(title: "Я здесь", text: ""), count: 100)
+        vm.poems = [Post](repeating: Post(title: "Я здесь", text: "", tags: ["tag1", "tag2"]), count: 100)
         return vm
     }()
     static var previews: some View {

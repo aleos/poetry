@@ -9,13 +9,52 @@
 import Foundation
 import GoogleAPIClientForREST_Blogger
 
-struct Poem {
-    let title: String
-    let text: String
+struct Post {
+    var title: String
+    var text: String
+    var date: Date?
+    var tags: [String]
+}
+
+extension Post {
+    var markdownContent: String {
+        var content = ""
+        for line in text.split(separator: "\n", omittingEmptySubsequences: false) {
+            var line = line
+            if !line.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                line = line + "  "
+            }
+            content += line + "\n"
+        }
+        content = content.replacingOccurrences(of: "  \n\n", with: "\n\n")
+        content = content.replacingOccurrences(of: "*", with: "\\*")
+        return content
+    }
+
+    var jekyllMarkdown: String {
+        """
+        ---
+        title: "\(title.replacingOccurrences(of: "\\", with: "\\\\").replacingOccurrences(of: "\"", with: "\\\""))"
+        date: \(date?.formatted(.iso8601) ?? "")
+        tags: \(tags)
+        ---
+        
+        \(markdownContent)
+        """
+    }
+    
+    var jekyllFilenameBase: String { "\(date?.formatted(.iso8601.year().month().day()) ?? "")-\(title)" }
+    
+    init(_ post: GTLRBlogger_Post) {
+        title = post.title ?? ""
+        text = post.content?.attributedHtmlString?.string ?? ""
+        date = post.published.flatMap { ISO8601DateFormatter().date(from: $0) }
+        tags = post.labels ?? []
+    }
 }
 
 class PoemsViewModel: ObservableObject {
-    @Published var poems = [Poem]()
+    @Published var poems = [Post]()
     
     init() {
         fetchPoems()
@@ -26,27 +65,58 @@ class PoemsViewModel: ObservableObject {
             if let error = error {
                 print("Error fetching posts\(error)")
             } else {
-                self?.poems = posts.reduce([]) { partialResult, post in
-                    guard let title = post.title, let text = post.content?.attributedHtmlString?.string else { return partialResult }
-                    return partialResult + [Poem(title: title, text: text)]
-                }
+                self?.poems = posts.map(Post.init)
+                #if DEBUG
+                self?.savePostsInDocuments(bloggerPosts: posts)
+                #endif
             }
         }
     }
     
-    private func savePostsInDocuments(posts: [GTLRBlogger_Post]) {
+    private func savePostsInDocuments(bloggerPosts: [GTLRBlogger_Post]) {
         let postsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("Posts-\(Date.now.formatted(.iso8601))")
         print("Posts dir URL is \(postsURL)")
+        
         do {
             try FileManager.default.createDirectory(at: postsURL, withIntermediateDirectories: true)
-            for post in posts {
-                let publishedDate = ISO8601DateFormatter().date(from: post.published!)!
-                let dateFormatted = publishedDate.formatted(.iso8601.year().month().day())
-                let postURL = postsURL.appendingPathComponent("\(dateFormatted)-\(post.title!).md")
-                try post.content?.attributedHtmlString?.string.write(to: postURL, atomically: true, encoding: .utf8)
-            }
         } catch {
             print(error.localizedDescription)
+        }
+        
+        for bloggerPost in bloggerPosts {
+            let post = Post(bloggerPost)
+            print("================================================")
+            print("Title:     \(post.title)")
+            print("Published: \(bloggerPost.published ?? "")")
+            print("Tags:      \(post.tags)")
+            print("Post ID:   \(bloggerPost.identifier ?? "")")
+            print("Post URL:  \(bloggerPost.url ?? "")")
+            
+            do {
+                try post.jekyllMarkdown.write(to: postsURL.appendingPathComponent(post.jekyllFilenameBase + ".md"), atomically: true, encoding: .utf8)
+            } catch {
+                print(error.localizedDescription)
+            }
+            
+            if bloggerPost.images?.isEmpty == false {
+                let postImagesFolder = postsURL.appendingPathComponent(post.jekyllFilenameBase)
+                do {
+                    try FileManager.default.createDirectory(at: postImagesFolder, withIntermediateDirectories: true)
+                } catch {
+                    print(error.localizedDescription)
+                }
+                Task {
+                    for imageUrlItem in bloggerPost.images ?? [] {
+                        guard let url = URL(string: imageUrlItem.url ?? "") else { continue }
+                        do {
+                            let (imageData, _) = try await URLSession.shared.data(from: url)
+                            try imageData.write(to: postImagesFolder.appendingPathComponent(url.lastPathComponent))
+                        } catch {
+                            print(error.localizedDescription)
+                        }
+                    }
+                }
+            }
         }
     }
 }
